@@ -1,0 +1,48 @@
+[
+  {
+    "portName": "Venice",
+    "portColor": "PURPLE",
+    "safeInventory": [],
+    "nonSafeInventory": [],
+    "crewCards": null
+  },
+  {
+    "portName": "Cadiz",
+    "portColor": "YELLOW",
+    "safeInventory": [],
+    "nonSafeInventory": [],
+    "crewCards": null
+  },
+  {
+    "portName": "Marseilles",
+    "portColor": "GREEN",
+    "safeInventory": [],
+    "nonSafeInventory": [],
+    "crewCards": null
+  },
+  {
+    "portName": "London",
+    "portColor": "RED",
+    "safeInventory": [],
+    "nonSafeInventory": [],
+    "crewCards": null
+  },
+  {
+    "portName": "Amsterdam",
+    "portColor": "BLACK",
+    "safeInventory": [],
+    "nonSafeInventory": [
+      "DIAMOND"
+    ],
+    "crewCards": null
+  },
+  {
+    "portName": "Genoa",
+    "portColor": "BLACK",
+    "safeInventory": [],
+    "nonSafeInventory": [
+      "PEARL"
+    ],
+    "crewCards": null
+  }
+]

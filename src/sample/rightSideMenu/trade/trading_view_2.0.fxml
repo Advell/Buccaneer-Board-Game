@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.rightSideMenu.trade.TradingController">
+   <children>
+      <Label layoutX="53.0" layoutY="32.0" prefHeight="25.0" prefWidth="116.0" text="RED CARDS" />
+      <Button layoutX="65.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="-" />
+      <Button layoutX="65.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="53.0" layoutY="118.0" text="BLACK CARDS" />
+      <Label layoutX="27.0" layoutY="75.0" prefHeight="25.0" prefWidth="38.0" text="RED1" textFill="#f80606" />
+      <Label fx:id="red1player" layoutX="65.0" layoutY="48.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="158.0" layoutY="88.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="RED2-" />
+      <Button layoutX="158.0" layoutY="67.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="RED2+" />
+      <Label layoutX="120.0" layoutY="76.0" prefHeight="25.0" prefWidth="38.0" text="RED2" textFill="#f80606" />
+      <Label fx:id="red2player" layoutX="158.0" layoutY="49.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="241.0" layoutY="88.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="241.0" layoutY="67.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="203.0" layoutY="76.0" prefHeight="25.0" prefWidth="38.0" text="RED3" textFill="#f80606" />
+      <Label fx:id="red3player" layoutX="241.0" layoutY="49.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="79.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="79.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="33.0" layoutY="163.0" prefHeight="25.0" prefWidth="46.0" text="BLACK1" />
+      <Label fx:id="black1player" layoutX="79.0" layoutY="136.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="155.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="155.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="113.0" layoutY="162.0" prefHeight="25.0" prefWidth="46.0" text="BLACK2" />
+      <Label fx:id="black2player" layoutX="155.0" layoutY="135.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="238.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="238.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="192.0" layoutY="162.0" prefHeight="25.0" prefWidth="46.0" text="BLACK3" />
+      <Label fx:id="black3player" layoutX="238.0" layoutY="135.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="79.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="79.0" layoutY="228.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="41.0" layoutY="237.0" prefHeight="25.0" prefWidth="38.0" text="RUM" />
+      <Label fx:id="rumPlayer" layoutX="79.0" layoutY="210.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="155.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="155.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="117.0" layoutY="236.0" prefHeight="25.0" prefWidth="38.0" text="PEARL" />
+      <Label fx:id="pearlPlayer" layoutX="155.0" layoutY="209.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="238.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="238.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="200.0" layoutY="236.0" prefHeight="25.0" prefWidth="38.0" text="GOLD" />
+      <Label fx:id="goldPlayer" layoutX="238.0" layoutY="209.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="241.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="241.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="203.0" layoutY="315.0" prefHeight="25.0" prefWidth="38.0" text="RUBY" />
+      <Label fx:id="rubyPlayer" layoutX="241.0" layoutY="288.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="78.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="78.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="15.0" layoutY="314.0" prefHeight="25.0" prefWidth="59.0" text="DIAMOND" />
+      <Label fx:id="diamondPlayer" layoutX="78.0" layoutY="287.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Label fx:id="totalPlayer" layoutX="208.0" layoutY="344.0" prefHeight="39.0" prefWidth="66.0" text="Label LEFT" />
+      <Label fx:id="totalPort" layoutX="290.0" layoutY="343.0" prefHeight="39.0" prefWidth="66.0" text="Label RIGHT" />
+      <Button layoutX="200.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" text="complete" />
+      <Label layoutX="330.0" layoutY="32.0" prefHeight="25.0" prefWidth="116.0" text="RED CARDS" />
+      <Button layoutX="341.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="341.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="328.0" layoutY="126.0" text="BLACK CARDS" />
+      <Label layoutX="303.0" layoutY="74.0" prefHeight="25.0" prefWidth="38.0" text="RED1" textFill="#f80606" />
+      <Label fx:id="red1Port" layoutX="341.0" layoutY="47.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="434.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="434.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="396.0" layoutY="75.0" prefHeight="25.0" prefWidth="38.0" text="RED2" textFill="#f80606" />
+      <Label fx:id="red2Port" layoutX="434.0" layoutY="48.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="517.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="517.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="479.0" layoutY="75.0" prefHeight="25.0" prefWidth="38.0" text="RED3" textFill="#f80606" />
+      <Label fx:id="red3port" layoutX="517.0" layoutY="48.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="354.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="354.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="308.0" layoutY="171.0" prefHeight="25.0" prefWidth="46.0" text="BLACK1" />
+      <Label fx:id="black1port" layoutX="354.0" layoutY="144.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="430.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="430.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="388.0" layoutY="170.0" prefHeight="25.0" prefWidth="46.0" text="BLACK2" />
+      <Label fx:id="black2port" layoutX="430.0" layoutY="143.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="513.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="513.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="467.0" layoutY="170.0" prefHeight="25.0" prefWidth="46.0" text="BLACK3" />
+      <Label fx:id="black3port" layoutX="513.0" layoutY="143.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="354.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="354.0" layoutY="236.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="316.0" layoutY="245.0" prefHeight="25.0" prefWidth="38.0" text="RUM" />
+      <Label fx:id="rumPort" layoutX="354.0" layoutY="218.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="430.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="430.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="392.0" layoutY="244.0" prefHeight="25.0" prefWidth="38.0" text="PEARL" />
+      <Label fx:id="pearlPort" layoutX="430.0" layoutY="217.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="513.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="513.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="475.0" layoutY="244.0" prefHeight="25.0" prefWidth="38.0" text="GOLD" />
+      <Label fx:id="goldPort" layoutX="513.0" layoutY="217.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="356.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="356.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="318.0" layoutY="315.0" prefHeight="25.0" prefWidth="38.0" text="RUBY" />
+      <Label fx:id="rubyPort" layoutX="356.0" layoutY="288.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+      <Button layoutX="511.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="_" />
+      <Button layoutX="511.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Label layoutX="448.0" layoutY="320.0" prefHeight="25.0" prefWidth="59.0" text="DIAMOND" />
+      <Label fx:id="diamondPort" layoutX="511.0" layoutY="293.0" prefHeight="17.0" prefWidth="38.0" text="Label" />
+   </children>
+</AnchorPane>

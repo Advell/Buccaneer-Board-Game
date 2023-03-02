@@ -1,0 +1,228 @@
+    private ArrayList<CrewCard> pirateCards;
+        private String portName;
+        private final InGameColor portOwnerColor;
+        private ArrayList<Treasure> nonSafe = new ArrayList<>(1);
+        private ArrayList<Treasure> safe = new ArrayList<>(1);
+
+        public Port(InGameColor color, String portName) {
+            this.portOwnerColor = color;
+            this.portName = portName;
+            pirateCards = new ArrayList<>();
+        }
+
+
+        public InGameColor getColor() {
+            return portOwnerColor;
+        }
+
+        public String getPortName() {
+            return portName;
+        }
+
+        public void checkIfOwner(Player playerIN) {
+            if (playerIN.getColor() != portOwnerColor) {
+                depositLoot(playerIN);
+            } else {
+                //trade sequence
+            }
+        }
+
+
+        public void depositLoot(Player playerIN) {
+
+            //Empty the ship's inventory and put into the port
+            if (playerIN.getColor() != portOwnerColor) return;
+            for (int i = playerIN.getShip().getAmountOfTreasure(); i > 0; i--) {
+                nonSafe.add(playerIN.getPlayersShip().getShipInventory(i));
+            }
+            playerIN.getPlayersShip().clearInventory();
+            // players loot is moved into non safe array
+            //player.getPlayersShip().getShipInventory().clear();  //clears the ship inv
+
+            //Keep track of if treasure reaches 3 or higher so can move to the safe
+            int[] treasureTally = new int[5];
+
+            for (Treasure i : nonSafe) {
+                treasureTally[i.index - 1]++;
+
+            }
+
+            int nItems;
+            for (int i = 0; i < treasureTally.length; i++) {
+                if (treasureTally[i] / 3 > 0) {
+                    nItems = i % 3;
+                    treasureTally[i] = nItems;
+                    Iterator<Treasure> itr = nonSafe.iterator();
+                    while (itr.hasNext()) {
+                        Treasure t = itr.next();
+                        if (i + 1 == t.index) itr.remove();
+                    }
+                    for (int j = 0; j < nItems; j++) {
+                        safe.add(getByIndex(i + 1));
+                        System.out.println(getByIndex(i + 1).label + " added safely");
+                    }
+                }
+            }
+        }
+
+        private Treasure getByIndex(int index) {
+            switch (index) {
+                case 1:
+                    return Treasure.GOLD;
+                case 2:
+                    return Treasure.RUM;
+                case 3:
+                    return Treasure.PEARL;
+                case 4:
+                    return Treasure.RUBY;
+                case 5:
+                    return Treasure.DIAMOND;
+                default:
+                    return null;
+            }
+        }
+
+        public int totalLoot() {
+            int loot = 0;
+            for (Treasure i : nonSafe) {
+                loot += i.value;
+            }
+            for (Treasure i : safe) {
+                loot += i.value;
+            }
+            return loot;
+        }
+
+public void trade(Player playerIN) {
+        ArrayList<Treasure> toGain = new ArrayList<>();
+        ArrayList<Treasure> toLoose = new ArrayList<>();
+        ArrayList<CrewCard> crewCardsToLoose = new ArrayList<>();
+        ArrayList<CrewCard> crewCardsToGain = new ArrayList<>();
+        System.out.println("");
+        int accValue = 0;
+        int i = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        for (int j = 1; j <= nonSafe.size(); j++) {
+            System.out.println(j + ". " + nonSafe.get(j - 1));
+
+        }
+        i = 0;
+        System.out.println("select the number corresponding with the item");
+
+        int itemPosition = Integer.parseInt(scanner.next());
+        toGain.add(nonSafe.get(itemPosition - 1));
+        int cost = 0;
+        for (Treasure T : toGain) {
+            cost += T.getValue();
+        }
+        System.out.println("the cost is" + cost);
+
+
+        for (int j = 0; j <= playerIN.getPlayersShip().getAmountOfTreasure(); j++) {
+            System.out.println(j + ". " + playerIN.getPlayersShip().getShipInventory(j));
+
+        }
+        i = 0;
+        itemPosition = Integer.parseInt(scanner.next());
+        toGain.add(nonSafe.get(itemPosition - 1));
+        cost = 0;
+        for (Treasure T : toGain) {
+            cost += T.getValue();
+        }
+        System.out.println("the cost is" + cost);
+
+
+        int credit = 0;
+        int amountOfTreasure = playerIN.getPlayersShip().getAmountOfTreasure();
+        while (credit != cost) {
+            for (int j = 0; j < amountOfTreasure; j++) {
+                System.out.println(++j + ". " + playerIN.getPlayersShip().getShipInventory(j));
+            }
+            i = 0;
+            System.out.println("If you want to sell a card press C, if you want to exchange Treasure press T.To exit pressN");
+
+            String input = scanner.next();
+
+            if (input.compareTo("N") == 0) break;
+
+            if (input.compareTo("T") == 0) {
+
+                System.out.println("SELECT WHICH TREASURE YOU WANT TO SELL");
+                int size = playerIN.getPlayersShip().getAmountOfTreasure();
+                for (int q = 0; q < size; q++) {
+                    System.out.println(q + "" + (playerIN.getPlayersShip().getShipInventory(q)));
+                }
+                System.out.println("SELECT WHICH TREASURE YOU WANT TO SELL by using the number");
+                int choice = Integer.parseInt(input);
+                size = playerIN.getPlayersShip().getAmountOfTreasure();
+
+                accValue += playerIN.getPlayersShip().getShipInventory(choice).value;
+                toLoose.add(playerIN.getPlayersShip().getShipInventory(choice));
+            }
+            System.out.println("Cost= " + cost);
+            System.out.println("Your offerings= " + accValue);
+
+            if (input.compareTo("C") == 0) {
+                for (int q = 0; q < pirateCards.size(); q++) {
+                    System.out.println(q + "" + (playerIN.getCrewCard(q).value + "" + playerIN.getCrewCard(q).color));
+                }
+                System.out.println("Select the number coresponding with the card");
+                int choice = Integer.parseInt(input);
+                crewCardsToLoose.add(pirateCards.get(choice));
+
+            }
+            if (input.compareTo("R") == 0) {
+                System.out.println("would you like to remove a crewcard from exchange (1) or  piece of treasure(2) ");
+                int choice = Integer.parseInt(input);
+                switch (choice) {
+
+                    case 1:
+                        //removes crew card from exchange
+                        for (int q = 0; q < crewCardsToLoose.size(); q++) {
+                            System.out.println(q + "" + (crewCardsToLoose.get(q).value + "" + crewCardsToLoose.get(q).color));
+                        }
+                        System.out.println("select approprite number");
+                        choice = Integer.parseInt(input);
+                        crewCardsToLoose.remove(choice);
+                        break;
+                    case 2:
+                        for (int q = 0; q < toLoose.size(); q++) {
+                            System.out.println(q + "" + (toLoose.get(q).label + "" + toLoose.get(q).value));
+                        }
+                        System.out.println("select approprite number");
+                        choice = Integer.parseInt(input);
+                        toLoose.remove(choice);
+                        break;
+                    default:
+                }
+
+            }
+        }
+        System.out.println("are you sure you want to trade these items?");
+               //int choice = Integer.parseInt(input);
+    }
+        /*
+        for (TypesOfTreasure T : player.getPlayersShip().getShipInventory()) {
+            accValue += T.value;
+            System.out.println(++i + ".Possible to trade: " + T.label);
+            System.out.println("would you like to select more loot");
+            if ()
+        }
+        for (TypesOfTreasure T : nonSafe) {
+        }
+    }*/
+
+    /*private void removeCrewCardFromExchange(ArrayList crewCardsToLoose) {
+        String input = scanner.next();
+
+        for (int q = 0; q < crewCardsToLoose.size(); q++) {
+            System.out.println(q + "" + (crewCardsToLoose.get(q).value + "" + crewCardsToLoose.get(q).color));
+        }
+        System.out.println("select approprite number");
+        int choice = Integer.parseInt(input);
+        crewCardsToLoose.remove(choice);
+
+
+    }*/
+}

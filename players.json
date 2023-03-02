@@ -1,0 +1,62 @@
+[
+  {
+    "ship": {
+      "shipElement": {
+        "selected": true,
+        "currentX": 405.0,
+        "currentY": 360.0,
+        "mouseX": 0.0,
+        "mouseY": 0.0,
+        "direction": "S"
+      },
+      "inventory": []
+    },
+    "Color": "PURPLE",
+    "nickName": "rfed"
+  },
+  {
+    "ship": {
+      "shipElement": {
+        "selected": false,
+        "currentX": 540.0,
+        "currentY": 585.0,
+        "mouseX": 0.0,
+        "mouseY": 0.0,
+        "direction": "N"
+      },
+      "inventory": []
+    },
+    "Color": "GREEN",
+    "nickName": "rwfdsa"
+  },
+  {
+    "ship": {
+      "shipElement": {
+        "selected": true,
+        "currentX": 225.0,
+        "currentY": 450.0,
+        "mouseX": 0.0,
+        "mouseY": 0.0,
+        "direction": "E"
+      },
+      "inventory": []
+    },
+    "Color": "RED",
+    "nickName": "das"
+  },
+  {
+    "ship": {
+      "shipElement": {
+        "selected": true,
+        "currentX": 630.0,
+        "currentY": 450.0,
+        "mouseX": 0.0,
+        "mouseY": 0.0,
+        "direction": "W"
+      },
+      "inventory": []
+    },
+    "Color": "YELLOW",
+    "nickName": "dads"
+  }
+]

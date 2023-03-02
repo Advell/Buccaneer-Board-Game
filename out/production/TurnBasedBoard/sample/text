@@ -1,0 +1,51 @@
+package sample;
+
+import sample.board.ChanceCards;
+import sample.board.InGameColor;
+import sample.board.CrewCard;
+import sample.board.board_elements.Ship;
+
+import java.util.ArrayList;
+
+public class Player {
+    private InGameColor color;
+    private Ship ship;
+    private String nickname;
+    private ArrayList<CrewCard> currentCrewCards = new ArrayList<>();
+    private ArrayList<ChanceCards> currentChanceCards = new ArrayList<>();
+
+    public Player(InGameColor ColorIn, Ship ShipIN, String nicknameIN) {
+        this.color = ColorIn;
+        this.ship = ShipIN;
+        this.nickname = nicknameIN;
+    }
+
+    public int getPirateScore() {
+        int totalPower = 0;
+        for (CrewCard c : currentCrewCards) {
+            if (c.color == InGameColor.BLACK) {
+                totalPower += c.value;
+            } else {
+                totalPower -= c.value;
+            }
+        }
+        totalPower = Math.abs(totalPower);
+        return totalPower;
+    }
+
+    public InGameColor getPlayersColor() {
+        return color;
+    }
+
+    public void addPirateCard(CrewCard cardIN) {
+        currentCrewCards.add(cardIN);
+    }
+
+    public void addCrewCard(CrewCard cardIN) {
+        currentCrewCards.add(cardIN);
+    }
+
+    public Ship getPlayersShip() {
+        return ship;
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.leftSideMenu.Menu.ShipActionController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="changeDirection" layoutX="34.0" layoutY="20.0" mnemonicParsing="false" onAction="#change" prefHeight="59.0" prefWidth="132.0" text="Change Direction" />
+            <Button fx:id="makeMove" layoutX="34.0" layoutY="119.0" mnemonicParsing="false" onAction="#move" prefHeight="59.0" prefWidth="132.0" text="Make Move" />
+            <Label fx:id="playerName" layoutX="125.0" layoutY="87.0" prefHeight="27.0" prefWidth="41.0" text="Label" />
+            <Label layoutX="21.0" layoutY="92.0" prefHeight="17.0" prefWidth="95.0" text="Player's Nikname:" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

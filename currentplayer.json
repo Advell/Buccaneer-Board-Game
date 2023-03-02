@@ -1,0 +1,15 @@
+{
+  "ship": {
+    "shipElement": {
+      "selected": true,
+      "currentX": 405.0,
+      "currentY": 360.0,
+      "mouseX": 0.0,
+      "mouseY": 0.0,
+      "direction": "S"
+    },
+    "inventory": []
+  },
+  "Color": "PURPLE",
+  "nickName": "rfed"
+}
